@@ -33,6 +33,26 @@ Tentative link-local IPv6 address fe80:0000:0000:0000:0302:0304:0506:0708
 Hello, world
 ```
 
+Do not forguet to set the java 8:
+
+```
+sudo update-alternatives --config java
+```
+
+Set your `JAVA_HOME` by putting this script in your `bashrc` or `.zshrc`:
+
+```
+if [ -z "${JAVA_HOME}" ]
+then
+    JAVA_HOME=$(readlink -nf $(which java) | xargs dirname | xargs dirname | xargs dirname)
+    if [ ! -e "$JAVA_HOME" ]
+    then
+        JAVA_HOME=""
+    fi
+    export JAVA_HOME=$JAVA_HOME
+fi
+```
+
 # Mobility plugin for ContikiOS Cooja sim/emu.
 
 The original plugin will not plug and simulated in new ContikiOS (>3.0) due to java issues. In order to fix the isuses, it is necessary to do some updates:
