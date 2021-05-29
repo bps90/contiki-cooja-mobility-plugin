@@ -1,4 +1,5 @@
 
+
 # Installing ContikiOS
 
 Installing [ContikiOS](http://www.contiki-os.org/) historical (<3.0) in new Linux based machines. 
@@ -42,13 +43,25 @@ The original plugin will not plug and simulated in new ContikiOS (>3.0) due to j
 - Update some deprecated message classes in the mobility.java file
 > Those updates have already been made
 
-Steps to install the pluing in a fresh ContikiOS installation:
+### Steps to install the plugin in a fresh ContikiOS installation:
 
 1- Download the mobility pluing
 > Download the mobility folder of this reposiroty
+> Copy the mobility folder to `<DIR-CONTIKI>/tools/cooja/apps/`
 
-2- Check if the cooja.jar in the build.xml file is ok.
+2- Check if the cooja.jar path in the build.xml line 7 file is ok.
+
+> The build.xml is in `<DIR-CONTIKI>/tools/cooja/apps/mobility`
 > for example: **/home/user/contiki/tools/cooja/dist/cooja.jar**
+
+3- Compile the plugin
+
+- Navigate to:
+```
+cd contiki/tools/cooja/apps/mobility
+sudo ant jar
+```
+- Depending on your permission, it may be necessary run `sudo ant run`
 
 3- Start the Cooja sim.
 ```
@@ -82,7 +95,7 @@ Depending on your permission, it may be necessary run `sudo ant run`
 0 3.0 0 0
 0 4.0 0 10
 ```
-save the above lines in a txt file, except the header, then provide file to Cooja through "Mobility..." option.
+save the above lines in a .txt file, except the header, then provide file to Cooja through "Mobility..." option.
 
  
 credits to:
