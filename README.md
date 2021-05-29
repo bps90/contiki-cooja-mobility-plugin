@@ -73,12 +73,15 @@ Depending on your permission, it may be necessary run `sudo ant run`
 - Now, under Tools tab, you should find "Mobility ..."  option.
 
 6- Try the following position file
-**#node time(s) x y**
-**0 0.0 0 10**
-**0 1.0 10 10**
-**0 2.0 10 0**
-**0 3.0 0 0**
-**0 4.0 0 10**
+
+#node time(s) x y
+```
+0 0.0 0 10
+0 1.0 10 10
+0 2.0 10 0
+0 3.0 0 0
+0 4.0 0 10
+```
 save the above lines in a txt file, except the header, then provide file to Cooja through "Mobility..." option.
 
  
