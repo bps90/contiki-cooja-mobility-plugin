@@ -122,6 +122,9 @@ Depending on your permission, it may be necessary run `sudo ant run`
 ```
 save the above lines in a .txt file, except the header, then provide file to Cooja through "Mobility..." option.
 
+## Notes
+
+- The file must be sorted by time.
  
 credits to:
 
