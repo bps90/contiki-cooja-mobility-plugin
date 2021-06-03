@@ -53,6 +53,11 @@ then
 fi
 ```
 
+### Notes
+
+- Cooja Motes just work in 32-bit systems
+- Some examples codes are broaken (ex: rpl-udp-powertrace.csc)
+
 # Mobility plugin for ContikiOS Cooja sim/emu.
 
 The original plugin will not plug and simulated in new ContikiOS (>3.0) due to java issues. In order to fix the isuses, it is necessary to do some updates:
